@@ -1,0 +1,50 @@
+{% load bootstrap4 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Koech</title>
+    <link rel="icon" type="image/png" href="{% static logo.png %}" sizes="16x16" />
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
+    {% block styles%}
+        {% bootstrap_css%}
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    {%endblock%}
+    {% block scripts %}
+    {% bootstrap_javascript %}
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+    {% endblock %}
+</head>
+<body>
+    <nav>
+        <div id='hamburger'>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul id="nav-links">
+            <li><a href="#">
+                <img id="#img" src="{% static 'images/logo.png'%}" alt="" width="120px" height="50px">
+            </a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">PROJECTS</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">BLOG</a></li>
+        </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <div id="jumbotron" class="jumbotron text-center">
+            <h1>HI,</h1>
+            <p style="color: white;" class="par"></p>
+            <h1>MEET <span class="meet">TOM KOECH,</span></h1>
+            <img class="mt-4" id="tomIMg" src="{% static 'images/tom.png' %}" alt="logo" height="300px" width="300px">
+            <h3 class="mt-4" class="favorite">YOUR FAVORITE SOFTWARE DEVELOPER</h3>
+            <img id="img2" src="assets/mouse_click.png" alt="">
+        </div>
+    </div>
+</body>
+</html>
